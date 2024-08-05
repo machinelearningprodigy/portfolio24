@@ -1,0 +1,270 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f0f0, #f9f9f9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #333;
+}
+
+header {
+  background-color: #000; /* Black background for navigation */
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6347; /* Hover color for links */
+}
+
+main {
+  margin-top: 80px; /* To avoid content being hidden under fixed header */
+}
+
+.project-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.project-buttons button {
+  background-color: #3498db;
+  border: 2px solid #000;
+  color: #050505;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 50px; /* Rounded corners */
+}
+
+.project-buttons button:nth-child(1) {
+  background-color: #ffbd03; /* Red for Machine Learning */
+}
+
+.project-buttons button:nth-child(2) {
+  background-color: #ffbd03; /* Green for Deep Learning */
+}
+
+.project-buttons button:nth-child(3) {
+  background-color: #ffbd03; /* Purple for Generative AI */
+}
+
+.project-buttons button:nth-child(4) {
+  background-color: #ffbd03; /* Yellow for Web Dev */
+}
+
+.project-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.intro h2 {
+  font-size: 20px;
+  color: #333;
+  animation: bounceIn 2s ease-in-out;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #555;
+}
+
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 48px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.project-tile {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 1s ease-in-out;
+}
+
+.project-tile:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.project-info {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.project-info .btn {
+  background-color: #3498db;
+  color: #070707;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded corners */
+  border: 2px solid #000;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-info .btn:hover {
+  transform: scale(1.1);
+}
+
+.project-info .btn:nth-child(3) {
+  background-color: #f00505; /* Orange for Live buttons */
+}
+
+.project-info .btn:nth-child(4) {
+  background-color: #f00505; /* Red for Code buttons */
+}
+
+.project-info .btn:nth-child(3):hover {
+  background-color: #f00505; /* Darker orange for Live buttons */
+}
+
+.project-info .btn:nth-child(4):hover {
+  background-color: #f00505; /* Darker red for Code buttons */
+}
+
+/* Section Specific Button Colors */
+#machine-learning .project-info .btn:nth-child(3),
+.project-buttons button:nth-child(1):hover {
+  background-color: #f6f7f5; /* Machine Learning */
+}
+
+#deep-learning .project-info .btn:nth-child(3),
+.project-buttons button:nth-child(2):hover {
+  background-color: #8cbba0; /* Deep Learning */
+}
+
+#generative-ai .project-info .btn:nth-child(3),
+.project-buttons button:nth-child(3):hover {
+  background-color: #8e44ad; /* Generative AI */
+}
+
+#web-dev .project-info .btn:nth-child(3),
+.project-buttons button:nth-child(4):hover {
+  background-color: #7ce1f3; /* Web Dev */
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .project-buttons button {
+    display: block;
+    margin: 15px auto;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .intro h2, .projects h2 {
+    font-size: 32px;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #e0e0e0;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* THUI SIS THE ALTER PAGE FOR PROJECT SECTION */
